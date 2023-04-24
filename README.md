@@ -15,4 +15,7 @@ go get -u github.com/ugent-library/friendly
 ```go
 friendly.Bytes(2_000_000_000)
 // "2 GB"
+
+friendly.TimeRemaining(30*time.Hour, friendly.EnglishTimeUnits)
+// "1 day"
 ```
