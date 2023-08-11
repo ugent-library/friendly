@@ -63,5 +63,9 @@ func TimeRemaining(dur time.Duration, units TimeUnits) string {
 		return fmt.Sprintf("1 %s", units.Second)
 	}
 
+	if s < 0 {
+		s = 0
+	}
+
 	return fmt.Sprintf("%d %s", s, units.Seconds)
 }
